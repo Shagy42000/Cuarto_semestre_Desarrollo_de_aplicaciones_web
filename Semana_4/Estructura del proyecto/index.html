@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Sitio Web Sencillo</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">MiSitioWeb</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Encabezado -->
+    <header class="bg-primary text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="display-4">Bienvenido a mi sitio web</h1>
+                    <p class="lead">Una página web responsiva creada con Bootstrap 5 y CSS3</p>
+                    <a href="#servicios" class="btn btn-light btn-lg mt-3 custom-btn">Ver más</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Contenido principal -->
+    <main class="py-5">
+        <div class="container" id="servicios">
+            <h2 class="text-center mb-4 section-title">Nuestros Servicios</h2>
+            
+            <!-- Grid de 3 columnas -->
+            <div class="row">
+                <!-- Columna 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="icon-circle mb-3">
+                                <span class="icon">🖥️</span>
+                            </div>
+                            <h3 class="card-title">Diseño Web</h3>
+                            <p class="card-text">Creamos sitios web modernos y responsivos que se adaptan a todos los dispositivos.</p>
+                            <a href="#" class="btn btn-primary">Más información</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Columna 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="icon-circle mb-3">
+                                <span class="icon">📱</span>
+                            </div>
+                            <h3 class="card-title">Desarrollo Móvil</h3>
+                            <p class="card-text">Desarrollamos aplicaciones móviles para iOS y Android con las últimas tecnologías.</p>
+                            <a href="#" class="btn btn-primary">Más información</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Columna 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="icon-circle mb-3">
+                                <span class="icon">🎨</span>
+                            </div>
+                            <h3 class="card-title">Diseño Gráfico</h3>
+                            <p class="card-text">Creamos identidad visual, logos y materiales gráficos para tu negocio.</p>
+                            <a href="#" class="btn btn-primary">Más información</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sección con collapse -->
+            <div class="row mt-5">
+                <div class="col-12 text-center">
+                    <h3 class="mb-4">Más información sobre nosotros</h3>
+                    
+                    <button class="btn btn-outline-primary mb-4" type="button" data-bs-toggle="collapse" data-bs-target="#infoExtra">
+                        Haz clic para ver más información
+                    </button>
+                    
+                    <div class="collapse" id="infoExtra">
+                        <div class="card card-body">
+                            <h4>Nuestra empresa</h4>
+                            <p>Somos una empresa dedicada al desarrollo web y diseño gráfico con más de 5 años de experiencia en el mercado. Trabajamos con las últimas tecnologías como Bootstrap 5, CSS3, HTML5 y JavaScript.</p>
+                            <p>Nuestro objetivo es crear soluciones digitales que ayuden a nuestros clientes a crecer en el mundo online.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Formulario de contacto -->
+    <section class="py-5 bg-light" id="contacto">
+        <div class="container">
+            <h2 class="text-center mb-4 section-title">Contáctanos</h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form class="p-4 rounded shadow-sm bg-white">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre completo</label>
+                            <input type="text" class="form-control" id="nombre" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="asunto" class="form-label">Asunto</label>
+                            <input type="text" class="form-control" id="asunto">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-lg w-100 custom-btn">Enviar mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Pie de página -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2023 MiSitioWeb. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-white me-3">Inicio</a>
+                    <a href="#servicios" class="text-white me-3">Servicios</a>
+                    <a href="#contacto" class="text-white">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Script simple -->
+    <script>
+        // Validación básica del formulario
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const mensaje = document.getElementById('mensaje').value;
+            
+            if (nombre && email && mensaje) {
+                alert('¡Gracias por tu mensaje, ' + nombre + '! Te contactaremos pronto.');
+                this.reset();
+            } else {
+                alert('Por favor, completa todos los campos obligatorios.');
+            }
+        });
+    </script>
+</body>
+</html>
