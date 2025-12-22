@@ -1,0 +1,1 @@
+Este repositorio se creo para subir os avances del trabajo de la asignatura Desarrollo de Apliaciones Web, impartida por la UNiversidad Estatal Amazonica, en la carrera de Ingenieria en Tecnologias de la infomación.
