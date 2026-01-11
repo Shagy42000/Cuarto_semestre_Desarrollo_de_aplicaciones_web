@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería Interactiva - Trabajo Universitario</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <h1>Galería Interactiva</h1>
+            <p>Trabajo de la Semana 5 - Manipulación del DOM con JavaScript</p>
+        </header>
+        
+        <div class="controles">
+            <div class="agregar-imagen">
+                <h2>Agregar Nueva Imagen</h2>
+                <div class="entrada">
+                    <input type="url" id="url-imagen" placeholder="https://ejemplo.com/imagen.jpg o assets/img/imagen.jpg">
+                    <button id="boton-agregar">Agregar Imagen</button>
+                </div>
+                <p class="ejemplo">Ejemplo de URL: https://picsum.photos/300/200 o assets/img/foto1.jpg</p>
+            </div>
+            
+            <div class="acciones">
+                <h2>Acciones</h2>
+                <button id="boton-eliminar" disabled>Eliminar Imagen Seleccionada</button>
+                <button id="boton-limpiar">Limpiar Galería</button>
+                <p>Imágenes seleccionadas: <span id="contador">0</span></p>
+            </div>
+            
+            <div class="instrucciones">
+                <h2>Instrucciones</h2>
+                <ul>
+                    <li>Haz clic en una imagen para seleccionarla</li>
+                    <li>Usa el botón "Eliminar" o la tecla SUPR para borrar la imagen seleccionada</li>
+                    <li>Puedes agregar imágenes usando URLs de internet o rutas locales</li>
+                </ul>
+            </div>
+        </div>
+        
+        <main>
+            <h2>Galería de Imágenes</h2>
+            <div id="galeria" class="galeria">
+                <!-- Las imágenes aparecerán aquí -->
+            </div>
+            <div id="mensaje-vacia" class="mensaje-vacia">
+                <p>La galería está vacía. Agrega algunas imágenes para comenzar.</p>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Trabajo de la Semana 5 - JavaScript</p>
+            <p>Universidad - Curso de Desarrollo Web</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

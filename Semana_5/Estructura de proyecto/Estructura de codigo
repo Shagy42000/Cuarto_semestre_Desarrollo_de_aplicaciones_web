@@ -1,0 +1,5 @@
+semana5/
+├── index.html # Estructura HTML principal
+├── styles.css # Estilos CSS (Grid, responsive, animaciones)
+├── script.js # Lógica JavaScript (DOM, eventos)
+├── README.md # Documentación
