@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario Simple</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Formulario</h2>
+    <form id="miForm">
+        <div>
+            <label>Nombre:</label>
+            <input type="text" id="nombre">
+            <div class="error" id="errNombre"></div>
+        </div>
+        
+        <div>
+            <label>Email:</label>
+            <input type="text" id="email">
+            <div class="error" id="errEmail"></div>
+        </div>
+        
+        <div>
+            <label>Contraseña:</label>
+            <input type="password" id="pass">
+            <div class="error" id="errPass"></div>
+        </div>
+        
+        <div>
+            <label>Confirmar:</label>
+            <input type="password" id="pass2">
+            <div class="error" id="errPass2"></div>
+        </div>
+        
+        <div>
+            <label>Edad:</label>
+            <input type="number" id="edad">
+            <div class="error" id="errEdad"></div>
+        </div>
+        
+        <div>
+            <button type="submit" id="btnEnviar" disabled>Enviar</button>
+            <button type="button" id="btnReset">Limpiar</button>
+        </div>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>

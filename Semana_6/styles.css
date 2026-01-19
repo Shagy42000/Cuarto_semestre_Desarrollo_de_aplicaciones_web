@@ -1,0 +1,36 @@
+body {
+    font-family: Arial;
+    padding: 20px;
+}
+
+div {
+    margin: 10px 0;
+}
+
+input {
+    display: block;
+    padding: 5px;
+    width: 200px;
+}
+
+input.correcto {
+    border: 2px solid green;
+}
+
+input.error {
+    border: 2px solid red;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+button {
+    padding: 8px 15px;
+    margin-right: 10px;
+}
+
+button:disabled {
+    background: #ccc;
+}
