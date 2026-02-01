@@ -1,0 +1,79 @@
+/* Estilos personalizados para el proyecto */
+
+:root {
+    --color-primary: #0d6efd;
+    --color-secondary: #6c757d;
+    --color-success: #198754;
+    --color-warning: #ffc107;
+    --color-danger: #dc3545;
+    --color-purple: #6f42c1;
+}
+
+/* Estilo personalizado para la barra de navegación */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Personalización del carrusel */
+.carousel-img {
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Estilo personalizado para las tarjetas */
+.card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Estilo personalizado para botones */
+.btn-primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+/* Estilo personalizado para la tabla */
+.table-hover tbody tr:hover {
+    background-color: rgba(13, 110, 253, 0.05);
+}
+
+/* Estilo personalizado para badges */
+.badge.bg-purple {
+    background-color: var(--color-purple) !important;
+}
+
+/* Estilo personalizado para el footer */
+.social-icons a {
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--color-primary) !important;
+}
+
+/* Estilo para el contador de caracteres */
+#contador-caracteres {
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+/* Responsividad adicional */
+@media (max-width: 768px) {
+    .carousel-img {
+        height: 250px;
+    }
+    
+    .display-4 {
+        font-size: 2.5rem;
+    }
+}

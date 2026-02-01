@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Semana 8 - Bootstrap y JS</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body>
+    <!-- Encabezado con Navbar -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <i class="bi-bootstrap-fill me-2"></i>
+                    Proyecto Semana 8
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#"><i class="bi-house-door me-1"></i> Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#productos"><i class="bi-grid me-1"></i> Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contacto"><i class="bi-envelope me-1"></i> Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#acerca"><i class="bi-info-circle me-1"></i> Acerca de</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container py-5">
+        <!-- Título Principal -->
+        <div class="text-center mb-5">
+            <h1 class="display-4 fw-bold text-primary">Bootstrap + JavaScript</h1>
+            <p class="lead">Proyecto de la semana 8 - Carrusel, Tablas y Formularios Interactivos</p>
+            
+            <!-- Botón de Alerta -->
+            <button id="btn-alerta" class="btn btn-warning btn-lg mt-3">
+                <i class="bi-exclamation-triangle me-2"></i>Haz clic para una alerta
+            </button>
+        </div>
+
+        <!-- Sección Carrusel -->
+        <section class="mb-5">
+            <h2 class="text-center mb-4">Galería de Imágenes</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2"></button>
+                        </div>
+                        <div class="carousel-inner rounded-3 shadow">
+                            <div class="carousel-item active">
+                                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" 
+                                     class="d-block w-100 carousel-img" alt="Tecnología 1">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                                    <h5>Desarrollo Web Moderno</h5>
+                                    <p>Tecnologías actuales para crear experiencias increíbles.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" 
+                                     class="d-block w-100 carousel-img" alt="Tecnología 2">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                                    <h5>Diseño Responsivo</h5>
+                                    <p>Adaptamos tu sitio a todos los dispositivos.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" 
+                                     class="d-block w-100 carousel-img" alt="Tecnología 3">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+                                    <h5>Interactividad con JavaScript</h5>
+                                    <p>Hacemos que tu sitio cobre vida.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Tabla de Productos -->
+        <section id="productos" class="mb-5">
+            <h2 class="text-center mb-4">Tabla de Productos</h2>
+            <div class="table-responsive shadow rounded">
+                <table class="table table-striped table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Producto</th>
+                            <th scope="col">Categoría</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Stock</th>
+                            <th scope="col">Valoración</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">001</th>
+                            <td>Laptop Pro</td>
+                            <td>Tecnología</td>
+                            <td>$1,200</td>
+                            <td><span class="badge bg-success">Disponible</span></td>
+                            <td>
+                                <span class="text-warning">
+                                    <i class="bi-star-fill"></i>
+                                    <i class="bi-star-fill"></i>
+                                    <i class="bi-star-fill"></i>
+                                    <i class="bi-star-fill"></i>
+                                    <i class="bi-star-half"></i>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">002</th>
+                            <td>Mouse Inalámbrico</td>
+                            <td>Accesorios</td>
+                            <td>$45</td>
+                            <td><span class="badge bg-warning text-dark">Pocas unidades</span></td>
+                            <td>
+                                <span class="text-warning">
+                                    <i class="bi-star-fill"></i>
+                                    <i class="bi-star-fill"></i>
+                                    <i class="bi-star-fill"></i>
+                                    <i class="bi-star-fill"></i>
+                                    <i class="bi-star"></i>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">003</th>
+                            <td>Teclado Mecánico</td>
+                            <td>Accesorios</td>
+                            <td>$89</td>
+                            <td><span class="badge bg-success">Disponible</span></td>
+                            <td>
+                                <span class="text-warning">
+                                    <i class="bi-star-fill"></i>
+                                    <i class="bi-star-fill"></i>
+                                    <i class="bi-star-fill"></i>
+                                    <i class="bi-star-fill"></i>
+                                    <i class="bi-star-fill"></i>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">004</th>
+                            <td>Monitor 24"</td>
+                            <td>Tecnología</td>
+                            <td>$320</td>
+                            <td><span class="badge bg-danger">Agotado</span></td>
+                            <td>
+                                <span class="text-warning">
+                                    <i class="bi-star-fill"></i>
+                                    <i class="bi-star-fill"></i>
+                                    <i class="bi-star-fill"></i>
+                                    <i class="bi-star-half"></i>
+                                    <i class="bi-star"></i>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">005</th>
+                            <td>Auriculares Bluetooth</td>
+                            <td>Audio</td>
+                            <td>$75</td>
+                            <td><span class="badge bg-success">Disponible</span></td>
+                            <td>
+                                <span class="text-warning">
+                                    <i class="bi-star-fill"></i>
+                                    <i class="bi-star-fill"></i>
+                                    <i class="bi-star-fill"></i>
+                                    <i class="bi-star-fill"></i>
+                                    <i class="bi-star-half"></i>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="text-end mt-2">
+                <small class="text-muted">Mostrando 5 productos de 25</small>
+            </div>
+        </section>
+
+        <!-- Sección Formulario de Contacto -->
+        <section id="contacto" class="mb-5">
+            <h2 class="text-center mb-4">Formulario de Contacto</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow">
+                        <div class="card-body p-4">
+                            <form id="contactForm" novalidate>
+                                <div class="mb-3">
+                                    <label for="nombre" class="form-label">Nombre completo *</label>
+                                    <input type="text" class="form-control" id="nombre" required>
+                                    <div class="invalid-feedback" id="error-nombre">
+                                        Por favor, ingresa tu nombre completo.
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Correo electrónico *</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                    <div class="invalid-feedback" id="error-email">
+                                        Por favor, ingresa un correo electrónico válido.
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="asunto" class="form-label">Asunto</label>
+                                    <select class="form-select" id="asunto">
+                                        <option selected value="">Selecciona un asunto</option>
+                                        <option value="consulta">Consulta General</option>
+                                        <option value="soporte">Soporte Técnico</option>
+                                        <option value="ventas">Información de Ventas</option>
+                                        <option value="otro">Otro</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="mensaje" class="form-label">Mensaje *</label>
+                                    <textarea class="form-control" id="mensaje" rows="5" required></textarea>
+                                    <div class="invalid-feedback" id="error-mensaje">
+                                        Por favor, escribe tu mensaje (mínimo 10 caracteres).
+                                    </div>
+                                    <div class="form-text">
+                                        <span id="contador-caracteres">0</span> / 500 caracteres
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="newsletter">
+                                    <label class="form-check-label" for="newsletter">
+                                        Suscribirme al newsletter
+                                    </label>
+                                </div>
+                                
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                    <button type="reset" class="btn btn-outline-secondary me-md-2">Limpiar</button>
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="bi-send me-1"></i>Enviar Mensaje
+                                    </button>
+                                </div>
+                            </form>
+                            
+                            <!-- Mensaje de éxito (oculto inicialmente) -->
+                            <div id="mensaje-exito" class="alert alert-success mt-3 d-none" role="alert">
+                                <i class="bi-check-circle-fill me-2"></i>
+                                ¡Mensaje enviado con éxito! Te contactaremos pronto.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Acerca de -->
+        <section id="acerca" class="mb-5">
+            <div class="card bg-light">
+                <div class="card-body text-center p-5">
+                    <h2 class="card-title mb-3">Acerca de este Proyecto</h2>
+                    <p class="card-text">
+                        Este proyecto fue desarrollado como parte de la semana 8 del curso, implementando 
+                        componentes de Bootstrap, interactividad con JavaScript y validación de formularios. 
+                        Combina diseño responsivo con funcionalidades dinámicas para crear una experiencia 
+                        de usuario completa.
+                    </p>
+                    <div class="mt-4">
+                        <span class="badge bg-primary me-2 p-2">HTML5</span>
+                        <span class="badge bg-info me-2 p-2">CSS3</span>
+                        <span class="badge bg-warning text-dark me-2 p-2">JavaScript</span>
+                        <span class="badge bg-purple me-2 p-2">Bootstrap 5</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5 class="text-primary">Proyecto Semana 8</h5>
+                    <p class="text-light small">
+                        Un proyecto educativo que demuestra el uso de Bootstrap y JavaScript 
+                        para crear interfaces web modernas y responsivas.
+                    </p>
+                </div>
+                
+                <div class="col-md-4 mb-3">
+                    <h5>Enlaces Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none">Inicio</a></li>
+                        <li><a href="#productos" class="text-light text-decoration-none">Productos</a></li>
+                        <li><a href="#contacto" class="text-light text-decoration-none">Contacto</a></li>
+                        <li><a href="#acerca" class="text-light text-decoration-none">Acerca de</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-4 mb-3">
+                    <h5>Contacto</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="bi-envelope me-2"></i>info@proyecto.com</li>
+                        <li><i class="bi-telephone me-2"></i>+1 (555) 123-4567</li>
+                        <li><i class="bi-geo-alt me-2"></i>Ciudad, País</li>
+                    </ul>
+                    
+                    <div class="mt-3">
+                        <h6>Síguenos</h6>
+                        <div class="social-icons">
+                            <a href="#" class="text-light me-3"><i class="bi-facebook fs-5"></i></a>
+                            <a href="#" class="text-light me-3"><i class="bi-twitter fs-5"></i></a>
+                            <a href="#" class="text-light me-3"><i class="bi-instagram fs-5"></i></a>
+                            <a href="#" class="text-light"><i class="bi-github fs-5"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="bg-light">
+            
+            <div class="text-center pt-2">
+                <p class="mb-0 small">
+                    &copy; 2023 Proyecto Semana 8. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle con Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JavaScript Personalizado -->
+    <script src="script.js"></script>
+</body>
+</html>
